@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-hazelchat.hazelchat",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Sales", "Communication"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://hazelchat.co/docs/api/#authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://hazelchat.co/docs/api/"
+			}
+		]
+	}
+}

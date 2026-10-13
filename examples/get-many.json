@@ -1,0 +1,32 @@
+{
+  "name": "Hazelchat: look at recent enquiries",
+  "nodes": [
+    {
+      "id": "8f2b1c0e-0a6d-4c55-9f3e-5d2a7b1c9e01",
+      "name": "When clicking 'Execute workflow'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "parameters": {}
+    },
+    {
+      "id": "1c7e4d2a-6b3f-4e8a-a1d9-0f5c3b2e7a14",
+      "name": "Hazelchat",
+      "type": "n8n-nodes-hazelchat.hazelchat",
+      "typeVersion": 1,
+      "position": [220, 0],
+      "parameters": {
+        "resource": "enquiry",
+        "operation": "getAll",
+        "limit": 20
+      }
+    }
+  ],
+  "connections": {
+    "When clicking 'Execute workflow'": {
+      "main": [[{ "node": "Hazelchat", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {},
+  "pinData": {}
+}
