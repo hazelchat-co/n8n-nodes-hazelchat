@@ -27,7 +27,7 @@ The key starts with `hzk_` and can only read enquiries. Revoke it in Hazelchat S
 
 Add **Hazelchat Trigger** to a workflow, choose the credential and publish the workflow.
 
-- **On publish**, the node subscribes the workflow's production webhook URL in Hazelchat. "Listen for test event" subscribes the test URL for the length of the test.
+- **On publish**, the node subscribes the workflow's production webhook URL in Hazelchat. "Listen for test event" subscribes the test URL for one enquiry; n8n then removes that subscription, so click it again for the next test.
 - **On unpublish**, it removes the subscription.
 - **Each new enquiry** arrives as one item with these fields: `id`, `created_at`, `name`, `email`, `message`, `website`, `last_question`, `answered` and `enquiry_url`. Where the visitor's browser reported them, the item also has `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `ad_click_network`, `referrer_host`, `chat_started_on` and `chat_opened_via`. See the [field reference](https://hazelchat.co/docs/api/#item).
 - **Signatures:** Hazelchat signs every delivery with a secret that only this subscription knows. The node checks the signature and the time it was sent before it starts the workflow. A request that was changed, forged or sent more than five minutes ago gets a 401 and starts nothing.
@@ -55,7 +55,7 @@ Each enquiry goes to your n8n: n8n Cloud (n8n GmbH, hosted in the EU) or your ow
 
 ## Compatibility
 
-Built with `@n8n/node-cli` 0.51.4 (strict lint). Tested locally against n8n 2.42.6 on Node.js 24.
+Built with `@n8n/node-cli` 0.51.4 (strict lint). Tested against a self-hosted n8n 2.42.6 on Node.js 24.
 
 ## Resources
 

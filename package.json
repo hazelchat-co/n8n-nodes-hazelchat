@@ -17,7 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hazelchat-co/n8n-nodes-hazelchat.git"
+    "url": "git+https://github.com/hazelchat-co/n8n-nodes-hazelchat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hazelchat-co/n8n-nodes-hazelchat/issues"
   },
   "scripts": {
     "build": "n8n-node build",
@@ -31,7 +34,8 @@
     "prepublishOnly": "n8n-node prerelease"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
   ],
   "publishConfig": {
     "access": "public"

@@ -14,7 +14,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const SCANNER = '@n8n/scan-community-package@0.38.0';
+const SCANNER = '@n8n/scan-community-package@0.39.0';
 const root = new URL('..', import.meta.url).pathname;
 const scanDir = join(root, '.scan');
 const entry = join(scanDir, 'node_modules/@n8n/scan-community-package/scanner/scanner.mjs');
